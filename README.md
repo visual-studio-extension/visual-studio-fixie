@@ -2,9 +2,7 @@
 
 Visual Studio extension that allow executing single test from Main Menu.
 
-## Setup
-
-#### Add fixie convention to test project.
+### 1. Add fixie convention to test project.
 
 ```csharp
 public class ClassConvention : Convention {
@@ -15,7 +13,7 @@ public class ClassConvention : Convention {
 }
 ```
 
-#### Create cake task
+### 2. Create cake task
 
 ```csharp
 Task("fixie")
@@ -29,6 +27,6 @@ Task("fixie")
     });
 ```
 
-#### Execute test from Fixie Menu
+### 3. Execute test from Fixie Menu
 
-> ![](VisualStudio.Fixie/Core/Resources/Screen.png)
+![](VisualStudio.Fixie/Core/Resources/Screen.png)
