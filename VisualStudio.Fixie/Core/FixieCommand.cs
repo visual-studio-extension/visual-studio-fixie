@@ -88,7 +88,8 @@ namespace VisualStudio.Fixie.Core
 
             try
             {
-                list = SolutionHelper.GetCSharpNames();
+                list = SolutionHelper.GetCSharpNames()
+                    .Where(file => file.EndsWith("Tests.cs") || file.EndsWith("Spec.cs"));
             }
             catch (Exception ex)
             {
@@ -122,6 +123,5 @@ namespace VisualStudio.Fixie.Core
                 CakeHelper.ExecuteCmd(task, dir.FullName);
             });
         }
-
     }
 }

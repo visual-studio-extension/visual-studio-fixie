@@ -56,7 +56,6 @@
     <Compile Include="ClassConvention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spec\HelloTests.cs" />
-    <Compile Include="Spec\ParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

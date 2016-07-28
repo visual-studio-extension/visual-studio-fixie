@@ -54,10 +54,7 @@
     <Compile Include="Core\FixieCommand.cs" />
     <Compile Include="Core\FixieCommandPackage.cs" />
     <Compile Include="Helpers\CakeHelper.cs" />
-    <Compile Include="Helpers\FixieHelper.cs" />
-    <Compile Include="Helpers\SimpleParser.cs" />
     <Compile Include="Helpers\SolutionHelper.cs" />
-    <Compile Include="Helpers\Task.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -185,8 +182,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Core\Resources\Fixie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Core\Resources\FixieCommand.png" />
     <Content Include="Core\Resources\FixieCommandPackage.ico" />
+    <Content Include="Core\Resources\Screen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

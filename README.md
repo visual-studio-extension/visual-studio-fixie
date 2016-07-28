@@ -1,6 +1,6 @@
 ## VisualStudio.Fixie
 
-...
+Visual Studio extension that allow executing single test from Main Menu.
 
 ## Setup
 
@@ -31,4 +31,4 @@ Task("fixie")
 
 - Execute test from Fixie Menu
 
->
+> ![](VisualStudio.Fixie/Core/Resources/Screen.png)
