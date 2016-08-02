@@ -104,7 +104,7 @@ namespace VisualStudio.Fixie.Core
                 var className = Path.GetFileNameWithoutExtension(ele);
                 var menuCommandID = new CommandID(Guids.CommandSet, Guids.FixieStartButton + index++);
                 var command = new OleMenuCommand(this.TestCallback, menuCommandID);
-                command.Text = $"Fixie: {className}";
+                command.Text = $"> {className}";
                 command.BeforeQueryStatus += (x, y) => { (x as OleMenuCommand).Visible = true; };
                 _commands.Add(command);
                 mcs.AddCommand(command);
@@ -115,7 +115,7 @@ namespace VisualStudio.Fixie.Core
         {
             var cmd = (OleMenuCommand)sender;
             var text = cmd.Text;
-            var task = text.Substring(text.IndexOf(':') + 1).Trim();
+            var task = text.Substring(2);
 
             System.Threading.Tasks.Task.Run(() =>
             {

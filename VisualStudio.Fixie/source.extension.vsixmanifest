@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="12b35bf7-a77a-477f-8e8b-9a51315bd23d" Version="1.0" Language="en-US" Publisher="wearetherock" />
+    <Identity Id="12b35bf7-a77a-477f-8e8b-9a51315bd23d" Version="0.2" Language="en-US" Publisher="wearetherock" />
     <DisplayName>VisualStudio.Fixie</DisplayName>
     <Description xml:space="preserve">Execute single test from Main Menu</Description>
     <MoreInfo>https://github.com/wk-j/visual-studio-fixie</MoreInfo>

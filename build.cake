@@ -8,7 +8,7 @@ var pass = EnvironmentVariable("ghp");
 var solution = "VisualStudio.Fixie.sln";
 var testProj = "VisualStudio.Fixie.Tests/VisualStudio.Fixie.Tests.csproj";
 var testDll = "VisualStudio.Fixie.Tests/bin/Debug/VisualStudio.Fixie.Tests.dll";
-var package = "VisualStudio.Fixie/bin/Debug/VisualStudio.Cake.vsix";
+var package = "VisualStudio.Fixie/bin/Debug/VisualStudio.Fixie.vsix";
 var assemblyInfo = "Visualstudio.Fixie/Properties/AssemblyInfo.cs";
 
 Action<string, string> build = (proj, config) => {
@@ -50,7 +50,7 @@ Task("create-github-release")
         var tag = string.Format("v{0}", version);
         var args = string.Format("tag -a {0} -m \"{0}\"", tag);
         var owner = "wk-j";
-        var repo = "visual-studio-cake";
+        var repo = "visual-studio-fixie";
 
         StartProcess("git", new ProcessSettings {
             Arguments = args

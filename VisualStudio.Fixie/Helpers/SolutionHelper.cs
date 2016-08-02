@@ -35,8 +35,15 @@ namespace VisualStudio.Fixie.Helpers
             var csFiles = Enumerable.Range(1, projects.Count).ToList().Select(x =>
             {
                 var project = projects.Item(x);
-                var files = new FileInfo(project.FullName).Directory.GetFiles("*.cs", SearchOption.AllDirectories);
-                return files;
+                if (project.Name.Contains("Tests"))
+                {
+                    var files = new FileInfo(project.FullName).Directory.GetFiles("*.cs", SearchOption.AllDirectories);
+                    return files;
+                }
+                else
+                {
+                    return Enumerable.Empty<FileInfo>();
+                }
             });
 
             return csFiles.SelectMany(x => x).Select(x => x.Name);

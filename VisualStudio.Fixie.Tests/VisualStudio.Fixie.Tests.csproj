@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ClassConvention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spec\HelloSpec.cs" />
     <Compile Include="Spec\HelloTests.cs" />
   </ItemGroup>
   <ItemGroup>

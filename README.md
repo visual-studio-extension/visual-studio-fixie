@@ -2,6 +2,13 @@
 
 Visual Studio extension that allow executing single test from Main Menu.
 
+## Condition
+
+- Project name must contains `Tests`
+- Test file must ends with `Tests` or `Spec`
+
+## Setup
+
 ### 1. Add fixie convention to test project.
 
 ```csharp
