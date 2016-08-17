@@ -21,7 +21,7 @@ Action<string, string> build = (proj, config) => {
     });
 };
 
-Task("fixie")
+Task("Fixie")
     .Does(() => {
         var config = testDll + ".config";
         var className = Argument("className", "");
@@ -31,19 +31,19 @@ Task("fixie")
         Fixie(testDll);
     });
 
-Task("build")
+Task("Build")
     .Does(() => {
         build(solution, "Debug");
     });
 
-Task("test")
+Task("Test")
     .Does(() => {
         build(testProj, "Debug");
         Fixie(testDll);
     });
 
-Task("create-github-release")
-    .IsDependentOn("build")
+Task("Create-Github-Release")
+    .IsDependentOn("Build")
     .Does(() => {
         var asm = ParseAssemblyInfo(assemblyInfo);
         var version = asm.AssemblyVersion;

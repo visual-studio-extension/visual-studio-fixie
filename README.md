@@ -1,11 +1,11 @@
 ## VisualStudio.Fixie
 
-Visual Studio extension that allow executing single test from Main Menu.
+My personal extension that allow executing single test from main menu.
 
 ## Condition
 
 - Project name must contains `Tests`
-- Test file must ends with `Tests` or `Spec`
+- Test file must ends with `Tests.cs` or `Spec.cs`
 
 ## Setup
 
@@ -23,7 +23,7 @@ public class ClassConvention : Convention {
 ### 2. Create cake task
 
 ```csharp
-Task("fixie")
+Task("Fixie")
     .Does(() => {
         var config = testDll + ".config";
         var className = Argument("className", "");
@@ -34,6 +34,6 @@ Task("fixie")
     });
 ```
 
-### 3. Execute test from Fixie Menu
+### 3. Execute test from Fixie menu
 
 ![](VisualStudio.Fixie/Core/Resources/Screen.png)
